@@ -1,0 +1,33 @@
+<!-- Error -->
+<div class="alert alert-dismissible alert-danger" *ngIf="error">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <h4><strong>Oh snap! An Error</strong></h4>
+  <pre><b>Estatus:</b> {{ error.status }}, <b>Message:</b>{{ error.message }}, <b>Url:</b>{{ error.url }}</pre>
+</div>
+<!--#.Error-->
+
+<!-- Loader -->
+<div class="alert alert-dismissible alert-dark" *ngIf="loading">
+  <strong>Loading Heroes ... <i class="fa fa-sync fa-spin fa-2x"></i></strong>
+</div>
+<!-- #.Loader-->
+
+<!-- List -->
+<div class="row" *ngIf="!loading">
+  <div class="col-sm-3 py-2" *ngFor="let heroe of heroes" (click)="showHeroe(heroe.id)">
+    <img
+      style="height: 200px; width: 100%; display: block;"
+      [src]="heroe.thumbnail.path + '.' + heroe.thumbnail.extension"
+      [alt]="heroe.name"
+    />
+    <div class="card text-white bg-danger card-heroe">
+      <div class="card-header heroe-name">{{ heroe.name }}</div>
+      <div class="card-body">
+        <small
+          ><em>{{ heroe.id }}</em></small
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<!--#.List-->

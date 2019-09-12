@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+#brand {
+  font-family: 'Anton', sans-serif !important;
+}
+.r-0{
+    border-radius: 0;
+}
+#jumbo-home{
+    background: url(./assets/marvel.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    h1{
+        font-family: 'Anton', sans-serif !important;
+    }
+    p{
+        color: #fff;
+    }
+}
+.card-heroe{
+    border-radius: 0;
+    border-bottom-right-radius: 50px;
+    cursor: pointer;
+}
+.heroe-name{
+    font-family: 'Anton', sans-serif !important;
+    color: #fff !important;
+}
